@@ -6,7 +6,7 @@ from joblib import dump
 
 data = fetch_20newsgroups()
 
-categories = ['sci.med', 'sci.space', 'comp.graphics']
+categories = ['comp.graphics', 'comp.os.ms-windows.misc', 'comp.sys.ibm.pc.hardware']
 train = fetch_20newsgroups(subset='train', categories=categories)
 test = fetch_20newsgroups(subset='test', categories=categories)
 model = make_pipeline(TfidfVectorizer(), MultinomialNB())
